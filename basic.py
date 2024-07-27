@@ -24,3 +24,13 @@ class Token:
 ##################################
 #LEXER
 ##################################
+
+class Lexer:
+    def __init__(self,text):
+        self.text=text
+        self.pos = -1
+        self.current_char = None
+
+    def advance(self):
+        self.pos+=1
+        self.current_char = self.text[pos]
